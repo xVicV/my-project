@@ -1,17 +1,16 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import BookingPage from "./components/BookingPage";
+import { render, screen, fireEvent } from "@testing-library/react";
+import Form from './components/Form';
 
-test("Renders the BookingPage", () => {
-   render(<BookingPage />);
-   const submitBtn = screen.getByText("Make Reservation");
-   expect(submitBtn).toBeInTheDocument();
+test('Renders the Form heading', () => {
+   render(<Form />);
+   const headingElement = screen.getByText("Reserve");
+   expect(headingElement).toBeInTheDocument();
 });
 
 test("Updates the time correctly", () => {
-   render(<BookingPage />);
-   const dateSelector = screen.getByLabelText(/Choose date/);
-   fireEvent.change(dateSelector, { target: { value: "2023-06-30" } });
-   const timeDropDown = screen.getByLabelText(/Choose time/);
-   fireEvent.change(timeDropDown, { target: { value: "15:00" } });
-   expect(timeDropDown.value).toEqual("15:00");
+   render(<Form />);
+   const dateSelector = screen.getByLabelText(/Date & Time \*/);
+   fireEvent.change(dateSelector, { target: { value: "2023-02-05T10:30" } });
+   const selectedValue = dateSelector.value;
+   expect(selectedValue).toBe("2023-02-05T10:30");
 });

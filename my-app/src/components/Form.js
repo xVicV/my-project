@@ -33,23 +33,23 @@ function Form() {
          <fieldset>
             <div className="field">
                <label htmlFor="name">Full Name *</label>
-               <input type="text" placeholder="John Smith" name="name" {...register('name')} />
+               <input id="name" type="text" placeholder="John Smith" name="name" {...register('name')} />
                {errors.name && <span className="error-message">{errors.name.message}</span>}
             </div>
             <div className="field">
                <label htmlFor="email">Email *</label>
-               <input type="text" placeholder="email@example.com" name="email" {...register('email')} />
+               <input id="email" type="text" placeholder="email@example.com" name="email" {...register('email')} />
                {errors.email && <span className="error-message">{errors.email.message}</span>}
             </div>
             <div className="field">
                <label htmlFor="telephone">Telephone *</label>
-               <input type="tel" placeholder="Enter your telephone number" name="telephone" {...register('telephone')} />
+               <input id="telephone" type="tel" placeholder="Enter your telephone number" name="telephone" {...register('telephone')} />
                {errors.telephone && <span className="error-message">{errors.telephone.message}</span>}
             </div>
             <div className="field occasion">
                <label htmlFor="occasion">Occasion (optional)</label>
                <div className="options">
-                  <select name="occasion" {...register('occasion')}>
+                  <select id="occasion" name="occasion" {...register('occasion')}>
                      <option value="select">Select occasion</option>
                      <option value="birthday">Birthday</option>
                      <option value="engagement">Engagement</option>
@@ -59,12 +59,12 @@ function Form() {
             </div>
             <div className="field guest">
                <label htmlFor="guests">Guests *</label>
-               <input type="number" placeholder="2" name="guests" {...register('guests')} />
+               <input id="guests" type="number" placeholder="2" name="guests" {...register('guests')} />
                {errors.guests && <span className="error-message">{errors.guests.message}</span>}
             </div>
             <div className="field">
                <label htmlFor="date">Date & Time *</label>
-               <input type="datetime-local" name="date" {...register('date')} />
+               <input id="date" type="datetime-local" name="date" {...register('date')} />
                {errors.date && <span className="error-message">{errors.date.message}</span>}
             </div>
             <button className="reserve-btn" type="submit">
@@ -75,4 +75,4 @@ function Form() {
    );
 }
 
-export default Form;
+export default Form
