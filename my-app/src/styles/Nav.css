@@ -12,14 +12,13 @@
 }
 
 .navigation ul li a:hover {
-   color: #495e57;
+   color: #f4ce14;
 }
 
 .navigation ul li .active-links.active {
-   color: #495e57
+   color: #495e57;
+   text-decoration: underline;
 }
-
-
 
 @media screen and (max-width: 1024px) {
    .navigation {

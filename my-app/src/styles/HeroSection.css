@@ -1,0 +1,136 @@
+.hero-section-background {
+   background-color: #495e57;
+   width: 100%;
+   padding: 1rem 0;
+}
+
+.hero-section-container {
+   display: flex;
+   justify-content: space-between;
+   width: 85%;
+   margin: 0 auto;
+   padding: 2rem 8rem;
+   color: #fff;
+}
+
+.section-left {
+   width: 80%;
+}
+
+.section-left h1 {
+   color: #f4ce14;
+}
+
+.section-left p {
+   width: 75%;
+   margin: 1rem 0 2rem;
+}
+
+.btn {
+   padding: 15px 30px;
+   font-size: 16pt;
+   font-weight: 600;
+   background-color: #f4ce14;
+   color: #333333;
+   border-radius: 2rem;
+   border: none;
+}
+
+.btn:hover {
+   cursor: pointer;
+   background-color: #333333;
+   color: #f4ce14;
+   transition: 0.3s;
+}
+
+.section-right {
+   position: relative;
+}
+
+.image-box {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 1rem;
+   overflow: hidden;
+   right: 0;
+   width: 30rem;
+   height: 40rem;
+   margin-left: 2rem;
+}
+
+.image-box img {
+   width: 100%;
+}
+
+@media (max-width: 1600px) {
+   .hero-section-container {
+      padding: 1rem 0rem;
+}
+}
+
+@media (max-width: 1324px) {
+   .hero-section-background {
+      padding-top: 10vh;
+   }
+
+   .image-box {
+      right: 0;
+      width: 20rem;
+      height: 25rem;
+   }
+
+   .hero-section-container {
+      width: 100%;
+      padding: 2rem;
+   }
+
+   .section-left h1 {
+      font-size: 8vh;
+   }
+   .section-left h2 {
+      font-size: 6vh;
+   }
+
+      .section-left p {
+      width: 100%;
+      font-size: smaller;
+   }
+}
+
+@media (max-width: 1024px) {
+   .hero-section-background {
+      padding-bottom: 1rem;
+   }
+   .hero-section-container {
+      flex-direction: column;
+   }
+
+   .image-box {
+      width: 100%;
+      height: 20rem;
+      position: initial;
+      overflow: hidden;
+      margin-left: 0;
+   }
+
+   .section-left{
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+   }
+   .section-left p {
+      width: 100%;
+      font-size: smaller;
+   }
+
+   .section-right {
+      position: initial;
+      margin-top: 30px;
+      width: 100%;
+   }
+
+   .btn {
+      font-size: smaller;
+   }
+}

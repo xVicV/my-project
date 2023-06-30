@@ -1,50 +1,61 @@
-*,
-*::before,
-*::after {
-   box-sizing: border-box;
-   margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;800&family=Markazi+Text:wght@400;500&display=swap');
+
+* {
    padding: 0;
+   margin: 0;
+   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-   width: 100%;
-   height: 100%;
+body {
+   font-family: 'Karla', sans-serif;
+   font-size: 16pt;
+   color: #333333;
 }
 
-#root {
-   display: flex;
-   flex-direction: column;
+input {
+   font-family: "Karla", sans-serif;
+   font-size: 15px;
+   color: #333333;
 }
 
-main {
-   width: 100%;
-   display: flex;
-   flex-direction: column;
-   gap: 10rem;
-   padding-top: 10rem;
+::placeholder {
+   /* Firefox */
+   color: #949494;
+   opacity: 1;
 }
 
-main button {
-   max-height: smaller;
+:-ms-input-placeholder {
+   /* Internet Explorer 10-11 */
+   color: #333333;
 }
 
-section {
-   width: 100%;
-   padding: 0 15%;
+::-ms-input-placeholder {
+   /* Microsoft Edge */
+   color: #333333;
+}
+
+h1,
+h2 {
+   font-family: 'Markazi Text', serif;
 }
 
 h1 {
-   font-size: 4rem;
+   font-size: 64pt;
 }
 
-button {
-   padding: 15px 30px;
-   font-size: 16pt;
-   font-weight: 600;
-   background-color: #f4ce14;
-   color: #333;
-   border-radius: 20px;
-   border: none;
+h2 {
+   font-size: 40pt;
+}
+
+h3 {
+   font-size: 18pt;
+}
+
+ul {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+   color: #333333;
 }
